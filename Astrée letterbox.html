@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>Astree</title>
+   <style>
+body {
+background-color: white;
+}
+
+h1 {
+    font-family: verdana;
+    font-size:150%;
+    text-align: center;
+    color:#7f86d4;
+    
+}
+
+h2 {
+  color: #7f86d4;
+  font-family: verdana;
+  font-size: 100%;
+    margin:20px;
+}
+
+p {
+  color: black;
+  font-family: times;
+  font-size: 100%;
+  padding: 30px;
+  line-height: 1.8;
+}
+
+a {
+    font-family: futura;
+}
+
+th{
+    text-align: left;
+}
+
+.box {
+    border: 2px solid powderblue;
+    margin: 50px;
+    background-color: beige;
+    
+}
+
+.button {
+  padding: 5px 5px;
+  width: 120px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: #7f86d4;
+  border: 1px solid #7A80BE;
+  box-shadow: 0 9px #999;
+  display: block;
+}
+
+.button:hover {background-color: #6d74bf}
+
+.button:active {
+  background-color: #6d74bf;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.filter-shortcut{
+ cursor:pointer;
+ text-decoration: underline;
+ color:blue;
+}
+
+.filter-shortcut:active {
+  color:purple;
+}
+
+.sidebar {
+  display: block;
+  width: 120px;
+height: 375px;
+  position: sticky;
+  top: 6%;
+float: right;
+padding: 10px;
+z-index:1;
+}
+
+.main {
+height: -webkit-fit-content;
+height: -moz-fit-content;
+  display: block;
+  position: relative;
+}
+
+.wrapper {
+  display: block;
+  background: none;
+  border: none;
+  margin: 0px;
+  width: 700px;
+}
+
+.top {
+    position:fixed;
+    width:100%;
+}
+
+.bar{
+    width:100%;
+    overflow:hidden;
+    border: none
+    margin: none;
+}
+
+.top,
+.bar{
+  top: 0;
+  border: none;
+  margin: 0px;
+  background-color: #4d6996;
+  z-index: 2;
+}
+
+.bar-item{
+    padding:8px 16px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+}
+
+.bar-button{
+    border: none;
+display: inline-block;
+padding: 8px 16px;
+vertical-align: middle;
+overflow: hidden;
+text-decoration: none;
+color: inherit;
+background-color: inherit;
+text-align: center;
+cursor: pointer;
+white-space: nowrap;
+}
+
+.bar-button:hover {
+    background-color: #304A75;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-contents {
+  display: none;
+  position: absolute;
+  top: 0%;
+  right:100%;
+}
+.dropdown:hover
+.dropdown-contents {
+  display: block;
+}
+
+.input{
+padding: 8px;
+display: block;
+border: none;
+border-bottom: 1px solid #ccc;
+width: 400px;
+margin: auto;
+
+}
+
+.border{
+    border:1px solid #ccc;
+}
+
+.padding{
+    padding:8px 16px;
+}
+
+.table-all{
+    border:1px solid #ccc;
+    background: white;
+    width: 435px;
+    margin: auto;
+    padding: 10px;
+}
+
+.margin-top{
+    margin-top:16px;
+}
+
+.container{
+    display: block;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 500px;
+    height: fit;
+    position: relative;
+    padding: 25px;
+}
+
+</style>
+</head>
+
+   <body>
+   
+    <div class="box top bar">
+    <a href="https://astreetesting.tumblr.com/" class="bar-item bar-button">Home</a>
+    <a href="https://astreetesting.tumblr.com/letterbox" class="bar-item bar-button">Letterbox</a>
+    <a href="#" class="bar-item bar-button">Poems</a>
+    <a href="#" class="bar-item bar-button">About</a>
+  </div>
+
+
+<div class="box sidebar">
+<h2>Letterbox</h2>
+<div class="dropdown">
+    <button class="button"  onclick="myFunction(); myFunction2();">Livre 1</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction()">Responce de Celadon a Lycidas</button>
+   <button class="button" onclick="myFunction2()">Lettre de Celadon a La Bergere Astre</button>
+   </div>
+       </div>
+       <div class="dropdown">
+    <button class="button" onclick="myFunction3();">Livre 2</button>
+    <div class="dropdown-contents"> 
+      <button  class="button" onclick="myFunction3()">Lettre d'Amarillis à Alcippe
+</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction4(); myFunction5();  myFunction6(); myFunction7(); myFunction8(); myFunction9(); myFunction10();">Livre 3
+    </button>
+    <div class="dropdown-contents"> 
+        <button  class="button" onclick="myFunction4()">Lettre d'Astrée à Celadon</button>
+        <button  class="button" onclick="myFunction5()">Lettre d'Astree à Celadon</button>
+        <button class="button" onclick="myFunction6()">Lettre d’Astrée à Celadon</button>
+        <button class="button" onclick="myFunction7()">Lettre de Ligdamon à Silvie</button>
+        <button class="button" onclick="myFunction8()">Response de Silvie à Ligdamon</button>
+        <button class="button" onclick="myFunction9()">Lettre d'Aristrande à Sylvie</button>
+        <button class="button" onclick="myFunction10()">Response de Silvie</button>
+
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction11(); myFunction12(); myFunction13(); myFunction14(); myFunction15(); myFunction16();">Livre 4</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction11()">Lettre de Celadon à la Bergere Astrée.</button>
+    <button  class="button" onclick="myFunction12()">Lettre de Lycidas À Phillis</button>
+    <button  class="button" onclick="myFunction13()">Lettre d’Astrée à Celadon</button>
+    <button  class="button" onclick="myFunction14()">Lettre de Celadon à La Bergère Astrée</button>
+    <button  class="button" onclick="myFunction15()">Lettre Contrefaite
+d'Astrée à Celadon.</button>
+    <button  class="button" onclick="myFunction16()">Lettre d’Astrée à Celadon</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction17()">Livre 5</button>
+    <div class="dropdown-contents"> 
+        <button  class="button" onclick="myFunction17()">Lettre de Corilas à Stelle</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction18()">Livre 6</button>
+    <div class="dropdown-contents">
+    <button  class="button" onclick="myFunction18()">Lettre de Filandre à Diane</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction19(); myFunction20();">Livre 8</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction19()">Lettre de Hylas à Carlis</button>
+    <button  class="button" onclick="myFunction20()">Response de Carlis à Hylas</button>
+    <button  class="button" onclick="myFunction21()">Response de Stillaine à Hylas</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction22(); myFunction23(); myFunction24(); myFunction25(); myFunction26();">Livre 9</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction22()">Lettre de Lindamor à Galathée</button>
+    <button  class="button" onclick="myFunction23()">Lettre de Lindamor à Galathée</button>
+    <button  class="button" onclick="myFunction24()">Response
+de Leonide à Lindamor, pour Galathée.</button>
+    <button  class="button" onclick="myFunction25()">Response de Leonide à Lindamor </button>
+    <button  class="button" onclick="myFunction26()">Replique de Lindamor a Leonide</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction27(); myFunction28(); myFunction29(); myFunction30(); myFunction31(); myFunction32();">Livre 10</button>
+    <div class="dropdown-contents"> 
+        <button  class="button" onclick="myFunction27()">Lettre de Celion à Belinde</button>
+        <button  class="button" onclick="myFunction28()">Lettre d’Amaranthe à Celion</button>
+         <button  class="button" onclick="myFunction29()">Response de Celion à Amaranthe</button>
+         <button  class="button" onclick="myFunction30()">Lettre de Celion à Bellinde</button>
+         <button  class="button" onclick="myFunction31()">Lettre de Celion à Bellinde, en son Transport</button>
+         <button  class="button" onclick="myFunction32()">Lettre de Bellinde à Celion</button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction33(); myFunction34(); myFunction35();">Livre 11</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction33()">Lettre de Lindamor
+à Leonide.</button>
+    <button  class="button" onclick="myFunction34()">Lettre de Lindamor à Galathée.</button>
+   <button  class="button" onclick="myFunction35()">Lettre de Ligdamon à Silvie. </button>
+   </div>
+       </div>
+         <div class="dropdown">
+    <button class="button" onclick="myFunction36()">Livre 12</button>
+    <div class="dropdown-contents"> 
+    <button  class="button" onclick="myFunction36()">Lettre d’Astrée à Celadon.</button>
+   </div>
+       </div>
+          </div>
+          
+<div class="container box">
+            <input type="text" class="input border padding" placeholder="Cherche un ecrivain..." id="myInput" onkeyup="sort()">
+            <table class="table-all margin-top" id="LetterboxFilter">
+                <tr>
+                    <th style="width:10%;">De</th>
+                    <th style="width:10%;">À</th>
+                    <th style="width:10%;">Livre</th>
+                    <th style="width:70%;">Titre</th>
+                </tr>
+                <tr>
+                    <td>Celadon</td>
+                    <td>Lycidas</td>
+                    <td>1</td>
+                    <td class="filter-shortcut" onclick="myFunction()">Response de Celadon à Lycidas</td>
+                </tr>
+                <tr>
+                    <td>Celadon</td>
+                    <td>Astree</td>
+                    <td>1</td>
+                    <td class="filter-shortcut" onclick="myFunction2()">Lettre de Celadon à la Bergère Astrée</td>
+                </tr>
+                <tr>
+                    <td>Amarillis</td>
+                    <td>Alcippe</td>
+                    <td>2</td>
+                    <td class="filter-shortcut" onclick="myFunction3()">Lettre d'Amarillis à Alcippe</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction4()">Lettre d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction5()">Lettre d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction6()">Lettre d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Ligdamon</td>
+                    <td>Silvie</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction7()">Lettre de Ligdamon à Silvie</td>
+                </tr>
+                <tr>
+                    <td>Silvie</td>
+                    <td>Ligdamon</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction8()">Response de Silvie à Ligdamon</td>
+                </tr>
+                <tr>
+                    <td>Aristrande</td>
+                    <td>Silvie</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction9()">Lettre d'Aristrande à Sylvie</td>
+                </tr>
+                <tr>
+                    <td>Silvie</td>
+                    <td>Aristrande</td>
+                    <td>3</td>
+                    <td class="filter-shortcut" onclick="myFunction10()">Response de Silvie</td>
+                </tr>
+                <tr>
+                    <td>Celadon</td>
+                    <td>Astrée</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction11()">Lettre de Celadon à la Bergère Astrée</td>
+                </tr>
+                <tr>
+                    <td>Lycidas</td>
+                    <td>Phillis</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction12()">Lettre de Lycidas à Phillis</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction13()">Lettre d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Celadon</td>
+                    <td>Astrée</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction14()">Lettre de Celadon à La Bergère Astrée</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction15()">Lettre Contrefaite d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>4</td>
+                    <td class="filter-shortcut" onclick="myFunction16()">Lettre d'Astrée à Celadon</td>
+                </tr>
+                <tr>
+                    <td>Corilas</td>
+                    <td>Stelle</td>
+                    <td>5</td>
+                    <td class="filter-shortcut" onclick="myFunction17()">Lettre de Corilas à Stelle</td>
+                </tr>
+                <tr>
+                    <td>Filandre</td>
+                    <td>Diane</td>
+                    <td>6</td>
+                    <td class="filter-shortcut" onclick="myFunction18()">Lettre de Filandre à Diane</td>
+                </tr>
+                <tr>
+                    <td>Hylas</td>
+                    <td>Carlis</td>
+                    <td>8</td>
+                    <td class="filter-shortcut" onclick="myFunction19()">Lettre de Hylas à Carlis</td>
+                </tr>
+                <tr>
+                    <td>Carlis</td>
+                    <td>Hylas</td>
+                    <td>8</td>
+                    <td class="filter-shortcut" onclick="myFunction20()">Response de Carlis à Hylas</td>
+                </tr>
+                <tr>
+                    <td>Stillaine</td>
+                    <td>Hylas</td>
+                    <td>8</td>
+                    <td class="filter-shortcut" onclick="myFunction21()">Response de Stillaine à Hylas</td>
+                </tr>
+                <tr>
+                    <td>Lindamor</td>
+                    <td>Galathée</td>
+                    <td>9</td>
+                    <td class="filter-shortcut" onclick="myFunction22()">Lettre de Lindamor à Galathée</td>
+                </tr>
+                <tr>
+                    <td>Lindamor</td>
+                    <td>Galathée</td>
+                    <td>9</td>
+                    <td class="filter-shortcut" onclick="myFunction23()">Lettre de Lindamor à Galathée</td>
+                </tr>
+                <tr>
+                    <td>Leonide</td>
+                    <td>Lindamor</td>
+                    <td>9</td>
+                    <td class="filter-shortcut" onclick="myFunction24()">Response de Leonide à Lindamor, pour Galathée</td>
+                </tr>
+                <tr>
+                    <td>Leonide</td>
+                    <td>Lindamor</td>
+                    <td>9</td>
+                    <td class="filter-shortcut" onclick="myFunction25()">Response de Leonide à Lindamor</td>
+                </tr>
+                <tr>
+                    <td>Lindamor</td>
+                    <td>Leonide</td>
+                    <td>9</td>
+                    <td class="filter-shortcut" onclick="myFunction26()">Replique de Lindamor à Leonide</td>
+                </tr>
+                <tr>
+                    <td>Celion</td>
+                    <td>Belinde</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction27()">Lettre de Celion à Belinde</td>
+                </tr>
+                <tr>
+                    <td>Amaranthe</td>
+                    <td>Celion</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction28()">Lettre d'Amaranthe à Celion</td>
+                </tr>
+                <tr>
+                    <td>Celion</td>
+                    <td>Amaranthe</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction29()">LResponse de Celion à Amaranthe</td>
+                </tr>
+                <tr>
+                    <td>Celion</td>
+                    <td>Belinde</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction30()">Lettre de Celion à Belinde</td>
+                </tr>
+                <tr>
+                    <td>Celion</td>
+                    <td>Belinde</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction31()">Lettre de Celion à Belinde, en son Transport</td>
+                </tr>
+                <tr>
+                    <td>Belinde</td>
+                    <td>Celion</td>
+                    <td>10</td>
+                    <td class="filter-shortcut" onclick="myFunction32()">Lettre de Belinde à Celion</td>
+                </tr>
+                <tr>
+                    <td>Lindamor</td>
+                    <td>Leonide</td>
+                    <td>11</td>
+                    <td class="filter-shortcut" onclick="myFunction33()">Lettre de Lindamor à Leonide</td>
+                </tr>
+                <tr>
+                    <td>Lindamor</td>
+                    <td>Galathée</td>
+                    <td>11</td>
+                    <td class="filter-shortcut" onclick="myFunction34()">Lettre de Lindamor à Galathée</td>
+                </tr>
+                <tr>
+                    <td>Ligdamon</td>
+                    <td>Silvie</td>
+                    <td>11</td>
+                    <td class="filter-shortcut" onclick="myFunction35()">Lettre de Ligdamon à Silvie</td>
+                </tr>
+                <tr>
+                    <td>Astrée</td>
+                    <td>Celadon</td>
+                    <td>12</td>
+                    <td class="filter-shortcut" onclick="myFunction36()">Lettre d'Astrée à Celadon</td>
+                </tr>
+            </table>
+        </div>
+ 
+<script>
+function sort() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("LetterboxFilter");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function myFunction() {
+  if (a.style.display === "none") {
+    a.style.display = "block";
+  } else {
+    a.style.display = "none";
+  }
+}
+
+function myFunction2() {
+
+  if (b.style.display === "none") {
+    b.style.display = "block";
+  } else {
+    b.style.display = "none";
+  }
+}
+
+function myFunction3() {
+  if (c.style.display === "none") {
+    c.style.display = "block";
+  } else {
+    c.style.display = "none";
+  }
+}
+
+function myFunction4() {
+  if (d.style.display === "none") {
+    d.style.display = "block";
+  } else {
+    d.style.display = "none";
+  }
+}
+
+function myFunction5() {
+  if (e.style.display === "none") {
+    e.style.display = "block";
+  } else {
+    e.style.display = "none";
+  }
+}
+
+function myFunction6() {
+  if (f.style.display === "none") {
+    f.style.display = "block";
+  } else {
+    f.style.display = "none";
+  }
+}
+
+function myFunction7() {
+  if (g.style.display === "none") {
+    g.style.display = "block";
+  } else {
+    g.style.display = "none";
+  }
+}
+
+function myFunction8() {
+  if (h.style.display === "none") {
+    h.style.display = "block";
+  } else {
+    h.style.display = "none";
+  }
+}
+
+function myFunction9() {
+  if (i.style.display === "none") {
+    i.style.display = "block";
+  } else {
+    i.style.display = "none";
+  }
+}
+
+function myFunction10() {
+  if (j.style.display === "none") {
+    j.style.display = "block";
+  } else {
+    j.style.display = "none";
+  }
+}
+
+function myFunction11() {
+  if (k.style.display === "none") {
+    k.style.display = "block";
+  } else {
+    k.style.display = "none";
+  }
+}
+
+function myFunction12() {
+  if (l.style.display === "none") {
+    l.style.display = "block";
+  } else {
+    l.style.display = "none";
+  }
+}
+
+function myFunction13() {
+  if (m.style.display === "none") {
+    m.style.display = "block";
+  } else {
+    m.style.display = "none";
+  }
+}
+
+function myFunction14() {
+  if (n.style.display === "none") {
+    n.style.display = "block";
+  } else {
+    n.style.display = "none";
+  }
+}
+
+function myFunction15() {
+  if (o.style.display === "none") {
+    o.style.display = "block";
+  } else {
+    o.style.display = "none";
+  }
+}
+
+function myFunction16() {
+  if (p.style.display === "none") {
+    p.style.display = "block";
+  } else {
+    p.style.display = "none";
+  }
+}
+
+function myFunction17() {
+  if (q.style.display === "none") {
+    q.style.display = "block";
+  } else {
+    q.style.display = "none";
+  }
+}
+
+function myFunction18() {
+  if (r.style.display === "none") {
+    r.style.display = "block";
+  } else {
+    r.style.display = "none";
+  }
+}
+
+function myFunction19() {
+  if (s.style.display === "none") {
+    s.style.display = "block";
+  } else {
+    s.style.display = "none";
+  }
+}
+
+function myFunction20() {
+  if (t.style.display === "none") {
+    t.style.display = "block";
+  } else {
+    t.style.display = "none";
+  }
+}
+
+function myFunction21() {
+  if (u.style.display === "none") {
+    u.style.display = "block";
+  } else {
+    u.style.display = "none";
+  }
+}
+
+function myFunction22() {
+  if (v.style.display === "none") {
+    v.style.display = "block";
+  } else {
+    v.style.display = "none";
+  }
+}
+
+function myFunction23() {
+  if (w.style.display === "none") {
+    w.style.display = "block";
+  } else {
+    w.style.display = "none";
+  }
+}
+
+function myFunction24() {
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction25() {
+  if (y.style.display === "none") {
+    y.style.display = "block";
+  } else {
+    y.style.display = "none";
+  }
+}
+
+function myFunction26() {
+  if (z.style.display === "none") {
+    z.style.display = "block";
+  } else {
+    z.style.display = "none";
+  }
+}
+
+function myFunction27() {
+  if (aa.style.display === "none") {
+    aa.style.display = "block";
+  } else {
+    aa.style.display = "none";
+  }
+}
+
+function myFunction28() {
+  if (ab.style.display === "none") {
+    ab.style.display = "block";
+  } else {
+    ab.style.display = "none";
+  }
+}
+
+function myFunction29() {
+  if (ac.style.display === "none") {
+    ac.style.display = "block";
+  } else {
+    ac.style.display = "none";
+  }
+}
+
+function myFunction30() {
+  if (ad.style.display === "none") {
+    ad.style.display = "block";
+  } else {
+    ad.style.display = "none";
+  }
+}
+
+function myFunction31() {
+  if (ae.style.display === "none") {
+    ae.style.display = "block";
+  } else {
+    ae.style.display = "none";
+  }
+}
+
+function myFunction32() {
+  if (af.style.display === "none") {
+    af.style.display = "block";
+  } else {
+    af.style.display = "none";
+  }
+}
+
+function myFunction33() {
+  if (ag.style.display === "none") {
+    ag.style.display = "block";
+  } else {
+    ag.style.display = "none";
+  }
+}
+
+function myFunction34() {
+  if (h.style.display === "none") {
+    h.style.display = "block";
+  } else {
+    h.style.display = "none";
+  }
+}
+
+function myFunction35() {
+  if (ai.style.display === "none") {
+    ai.style.display = "block";
+  } else {
+    ai.style.display = "none";
+  }
+}
+
+function myFunction36() {
+  if (aj.style.display === "none") {
+    aj.style.display = "block";
+  } else {
+    aj.style.display = "none";
+  }
+}
+</script>
+
+ <div class="wrapper">
+   <div id="Div1" class="box">
+   <script>var a = document.getElementById("Div1");
+   a.style.display = "none"</script>
+         <h2>RESPONCE DE CELADON A LYCIDAS.</h2>
+         <p id="1"><i> Ecrivain: </i>Celadon<br/><i> Destinataire: </i>Lycidas<br/><br/>Ne t'enquiers plus de ce que je fais, mais sçache que
+       je continuë tousjours en ma peine ordinaire. Aymer, et ne l'oser faire paroistre, n'aymer
+       point, et jurer le contraire, cher frere, c'est tout l'exercice ou plustost le supplice de 
+       ton Celadon. On dit que deux contraires ne peuvent en mesme temps estre en mesme lieu,
+       toutesfois la vraye  et la fainte amitié, sont
+       d'ordinaire en mes actions, mais ne t'en estonne point, car je suis contraint à l'un par la
+       perfection, et à l'autre par le commandement de mon Astre. Que si ceste vie te semble
+       estrange, ressouviens-toy, que les miracles sont les œuvres ordinaires des Dieux, et que
+       veux-tu que ma Déesse cause en moy que des miracles ?</p> </div>
+           
+
+<div id="Div2" class="box">
+ <script> var b = document.getElementById("Div2");
+   b.style.display = "none"</script>
+       <h2>LETTRE DE CELADON A LA BERGERE ASTREE.</h2>
+       <p id="2"><i> Ecrivain: </i>Celadon<br/><i> Destinataire: </i>La Bergère Astrée<br/><br/>Mon Astre, si la dissimulation à quoy vous me contraignez, est pour
+        me faire mourir de peine, vous le pouvez plus aysément d'une seule parole, si c'est pour
+        punir mon outrecuïdance, vous estes juge trop doux, de m'ordonner un moindre supplice que la
+        mort. Que si c'est pour esprouver quelle puissance vous avez sur moy, pourquoy n'en
+        recherchez-vous un tesmoignage plus prompt que celui-ci, de qui la longueur vous doit estre
+        ennuyeuse ? car je ne sçaurois penser que ce soit pour celer nostre dessein, comme vous
+        dictes, puis que ne pouvant vivre en telle contrainte, ma mort sans doute en donra assez
+        prompte, et desplorable cognoissance. Jugez donc, mon bel Astre, que c'est assez endurer, et
+        qu'il est desormais  temps que vous me permettiez de
+        faire le personnage de Celadon, ayant si longuement, et avec tant de peine, representé celuy
+        de la personne du monde, qui luy est la plus contraire.</p>
+</div>
+
+   <div id="Div3" class="box">
+   <script>var c = document.getElementById("Div3");
+   c.style.display = "none"</script>
+         <h2>LETTRE D'AMARILLIS À ALCIPPE.</h2>
+         <p id="3"><i> Ecrivain: </i>Amarillis<br/><i> Destinataire: </i>Alcippe<br/><br/>Vostre opiniastreté a surpassé la mienne, mais la mienne aussi surmontera celle qui me contraint de vous advertir, que demain je parts, et qu'aujourd'huy si vous me trouvez sur le chemin, où nous nous rencontrasmes avant-hier, et que vostre amour se puisse contenter de parole, elle aura occasion de l'estre, et à Dieu. </p></div>
+         
+         <div id="Div4" class="box">
+   <script>var d = document.getElementById("Div4");
+   d.style.display = "none"</script>
+         <h2>LETTRE D'ASTRÉE À CELADON
+</h2>
+         <p id="4"><i> Ecrivain: </i>Astrée<br/><i> Destinataire: </i>Celadon<br/><br/>Qu'est-ce que vous entreprenez Celadon ? en quelle confusion vous allez vous mettre ? croyez moy, qui vous conseille en amye, laissez ce dessein de me servir, il est trop plain d'incommoditez, quel contentement y esperez vous ? je suis tant insupportable que ce n'est guiere moins entreprendre que l'impossible, il faudra servir, souffrir, & n'avoir des yeux, ny de l'Amour que pour moy : car ne croyez point que je vueille avoir à partir avec quelqu'autre, ny que je reçoive une volonté à moitié mienne : je suis soupçonneuse, je suis jalouse, je suis difficile à gaigner, & facile à perdre, & puis aysée à offenser, & tres-mal-aysée à rappaiser, le moindre doute est en moy une asseurance, il faut que mes volontez soient des destinées, mon opinion des raisons, & mes commandemens des loix inviolables. Croyez moy encor un coup, retirez vous Berger de ce dangereux labyrinthe, & fuyez un dessein si ruineux. Je me recognois mieux que vous, ne vous figurez de pouvoir à la fin changer mon naturel, je rompray plustost que de plier, & ne vous plaignez à l'advenir de moy, si à ceste heure vous ne croyez ce que je vous en dis.</p></div>
+         
+         <div id="Div5" class="box">
+   <script>var e = document.getElementById("Div5");
+   e.style.display = "none"</script>
+         <h2>LETTRE D'ASTRÉE À CELADON</h2>
+         <p id="5"><i> Ecrivain: </i>Astree<br/><i> Destinataire: </i>Celadon<br/><br/> Vous ne voulez pas croire que je vous ayme, & vous desirez que je croye que vous m'aymez : si je ne vous ayme point, que vous profitera la creance que j'auray de vostre affection ? A faire peut-estre, que ceste opinion m'y oblige ? A peine, Celadon, le pourra ceste faible consideration, si vos merites, & les services que j'ay receus de vous ne l'ont peu encores. Or voyez en quel estat sont vos affaires, je ne veux pas seulement que vous sçachiez que je croy que vous m'ay miez, mais je veux de plus, que vous soyez asseuré que je vous ayme, & entre tant d'autres une chose seule vous en doit rendre certain ; si je ne vous aymois point, qui me feroit mespriser le contentement de mes parents. Si vous considerez combien je leur doy, vous cognoistrez en quelque sorte la qualité de mon amitié, puis que non seulement elle contrepese, mais emporte de tant, un si grand poids : & à-Dieu, ne soyez plus incredule.</br></br>
+
+  En mesme temps Silvie rapporta la lettre, & Galathée luy dit avec beaucoup de desplaisir, qu'il aymoit, & que de plus il estoit infiniment aymé, & luy releut la lettre, qui luy touchoit fort au cœur, voyant qu'elle avoit à forcer une place, où un si fort ennemy estoit des-ja victorieux : car par ces lettres, elle jugea que l'humeur de ceste Bergere n'estoit pas d'estre à moitié maistresse, mais avec une tres absoluë puissance commander à ceux qu'elle daignoit recevoir pour siens : elle se fortifia de beaucoup ce jugement, quand elle leut la lettre qui avoit esté seichée, elle estoit telle.
+ </p></div>
+ 
+    <div id="Div6" class="box">
+   <script>var f = document.getElementById("Div6");
+   f.style.display = "none"</script>
+         <h2>LETTRE D'ASTRÉE À CELADON</h2>
+         <p id="6"><i> Ecrivain: </i>Astree<br/><i> Destinataire: </i>Celadon<br/><br/>  Lycidas a dit à ma Phillis que vous estiez aujourd'huy de mauvaise humeur, en suis-je cause ou vous ? Si c'est moy, c'est sans occasion, car ne veux-je pas tousjours vous aymer, & estre aymée de vous ? & ne m'avez vous mille fois juré, que vous ne desiriez que cela seulement pour estre content ? Si c'est vous, vous me faictes tort, de disposer sans que je le sçache, de ce qui est à moy : car par la donation que vous m'avez faicte, & que j'ay receuë, vous & toutes vos actions sont miennes. Advertissez-m'en donc, & je verray si je vous en doy donner permission,& ce pendant je vous le deffends. </p></div>
+         
+            <div id="Div7" class="box">
+   <script>var g= document.getElementById("Div7");
+   g.style.display = "none"</script>
+         <h2>LETTRE DE LIGDAMON A SILVIE.</h2>
+         <p id="7"><i> Ecrivain: </i>Ligdamon<br/><i> Destinataire: </i>Silvie<br/><br/>La perte de ma vie n'eust eu assez de force pour vous descouvrir la temerité de vostre serviteur, sans vostre expres commandement, si toutefois vous jugez que je devois mourir, & me taire : dites aussi que vos yeux devoient avoir moins absolüe puissance sur moy, car si à la premiere semonce, que leur beauté m'en fit, je ne peus me deffendre de leur donner mon ame ; comment en ayant esté si souvent requis, eusse-je refusé la recognoissance de ce don ? Que si toutefois j'ay offensé en offrant mon cœur à vostre beauté, je veux bien pour la faute que j'ay commise de presenter à tant de merites chose de si peu de valeur, vous sacrifier encore ma vie, sans regretter la perte de l'un ny de l'autre, que d'autant qu'ils ne vous sont agreables. </p></div>
+
+
+   <div id="Div8" class="box">
+   <script>var h = document.getElementById("Div8");
+   h.style.display = "none"</script>
+         <h2>RESPONSE DE SILVIE À LIGDAMON.
+</h2>
+         <p id="8"><i> Ecrivain: </i>Sylvie<br/><i> Destinataire: </i>Ligdamon<br/><br/>S'il y a quelque chose en vous qui me plaise, c'est moins vostre mort que tout autre : la recognoissance de vostre faute m'a satisfaicte, & ne veux point d'autre vengeance de vostre temerité : que la peine que vous en aurez : recognoissez vous à l'advenir & me recognoissez. à-Dieu, & vivez.</p></div>
+         
+            <div id="Div9" class="box">
+   <script>var i = document.getElementById("Div9");
+   i.style.display = "none"</script>
+         <h2>LETTRE D'ARISTRANDE À SYLVIE
+</h2>
+         <p id="9"><i> Ecrivain: </i>Aristrande<br/><i> Destinataire: </i>Sylvie<br/><br/>Si mon affection ne vous a peu rendre mon service agreable, ny mon service mon affection, que pour le moins, ou ceste affection vous rende ma mort pleine de pitié, ou ma mort vous asseure de la fidelité de mon affection : & que comme nul n'ayma jamais tant de perfections, que nul aussi n'ayma jamais avec tant de passion. Le dernier tesmoignage que je vous en rendray, sera le don de ce que j'ay le plus cher apres vous, qui est mon frere : car je sçay bien que je le vous donne, puis que je luy donray charge de vous voir, sçachant assez par experience, qu'il est impossible que cela soit, sans qu'il vous ayme. N'ordonnez pas ma belle meurtriere, qu'il soit heritier de ma fortune, mais ouy bien de celle que j'eusse pû justement meriter envers toute autre que vous. Celuy qui vous escrit, c'est un serviteur, qui pour avoir eu plus d'Amour qu'un cœur n'estoit capable de retenir, voulut mourir plutost que d'en diminuer. </p></div>
+
+   <div id="Div10" class="box">
+   <script>var j = document.getElementById("Div10");
+   j.style.display = "none"</script>
+         <h2>RESPONCE DE CELADON A LYCIDAS.</h2>
+         <p id="10"><i> Ecrivain: </i>Sylvie<br/><i> Destinataire: </i>Ligdamon<br/><br/>
+Le Phœnix de la cendre sort,<br/>
+Parce qu'en la flame il est mort,<br/>
+L'absence en l'Amour est mortelle,<br/>
+Si la presence n'a rien pu,<br/>
+Jamais par le froid n'est rompu<br/>
+Le glaçon qu'un feu ne degelle.<br/>
+</p></div>
+
+<div id="Div11" class="box">
+   <script>var k = document.getElementById("Div11");
+   k.style.display = "none"</script>
+         <h2>LETTRE DE CELADON À LA BERGERE ASTRÉE.</h2>
+         <p id="11"><i> Ecrivain: </i>Celadon<br/><i> Destinataire: </i>Astrée<br/><br/>Belle Astrée, mon exil a esté vaincu de ma patience, fasse le Ciel qu'il l'ayt aussi esté de vostre amitié : je suis party avec tant d'ennuy, & revenu avec tant de contentement, que n'estant mort ny allant, ny revenant, je tesmoigneray tousjours qu'on ne peut mourir de trop de plaisir, ny de trop de desplaisir. Permettez moy donc que je vous voye, afin que je puisse raconter ma fortune à celle qui est ma seule fortune. </p></div>
+
+<div id="Div12" class="box">
+   <script>var l = document.getElementById("Div12");
+   l.style.display = "none"</script>
+         <h2>LETTRE DE LYCIDAS À PHILLIS.
+</h2>
+         <p id="12"><i> Ecrivain: </i>Lycidas<br/><i> Destinataire: </i>Phillis<br/><br/>Si je ne vous ay tousjours aymée, que jamais ne sois-je aymé de personne, & si mon affection a jamais changé, que jamais le mal-heur où je suis ne se change. Il est vray que depuis quelque temps, j'ay plus caché d'Amour dans le cœur, que je n'en ay laissé paroistre en mes yeux ny en mes paroles. Si j'ay failly en cela, accusez-en le respect que je vous porte, qui m'a ordonné d'en user ainsi. Que si vous ne croyez le serment que je vous en fay, tirez en preuve telle que vous voudrez de moy, & vous cognoistrez que vous m'avez mieux acquis, que je ne sçay vous en asseurer par mes veritables, mais trop impuissantes paroles.</p></div>
+         
+         <div id="Div13" class="box">
+   <script>var m = document.getElementById("Div13");
+   m.style.display = "none"</script>
+         <h2>LETTRE D'ASTREE A CELADON.
+
+</h2>
+         <p id="13"><i> Ecrivain: </i>Astree<br/><i> Destinataire: </i>Celadon<br/><br/>Hier nous allasmes au Temple, où nous fusmes assemblées pour assister aux honneurs qu'on fait à Pan & Siringue en leur chommant ce jour ; j'eusse dit festoyant si vous y eussiez esté, mais l'amitié que je vous porte est telle, que ny mesmes les choses divines, s'il m'est permis de le dire ainsi, sans vous ne me peuvent plaire. Je me trouve tant incommodée de nos communs importuns, que sans la promesse que j'ay de vous escrire tous les jours, je ne sçay si aujourd'huy vous eussiez eu de mes nouvelles, recevez-les donc pour ce coup de ma promesse. </p></div>
+         
+         <div id="Div14" class="box">
+   <script>var n = document.getElementById("Div14");
+   n.style.display = "none"</script>
+         <h2>LETTRE DE CELADON A LA BERGERE ASTREE.
+</h2>
+         <p id="14"><i> Ecrivain: </i>Lycidas<br/><i> Destinataire: </i>Phillis<br/><br/>Vous m'obligez & desobligez en mesme temps, pardon si ce mot vous offense. Quand vous me dittes que vous m'aimez, puis-je avoir quelque plus grande obligation à tous les Dieux ? Mais l'offense n'est pas petite quand ceste fois vous ne m'escrivez que pour me l'avoir promis, car je dois ce bien à nostre promesse & non pas à nostre amitié. Ressouvenez-vous je vous supplie, que je ne suis pas à vous parce que je le vous ay promis, mais par ce que veritablement je suis vostre, & que de mesme je ne veux pas des lettres pour les conditions qui sont entre nous, mais pour le seul tesmoignage de vostre bonne volonté, ne les cherissant pas pour estre marchandées, mais amoureuses seulement. </p></div>
+         
+          <div id="Div15" class="box">
+   <script>var o = document.getElementById("Div15");
+   o.style.display = "none"</script>
+         <h2>LETTRE CONTREFAITE D’ASTREE A CELADON</h2>
+         <p id="15"><i> Ecrivain: </i>Astree<br/><i> Destinataire: </i>Celadon<br/><br/>Celadon, puis que je suis contrainte par le commandement de mon pere, vous ne trouverez point estrange que je vous prie de finir ceste Amour qu'autrefois je vous ay conjuré de rendre eternelle ; Alcé m'a donnée à Corebe, & quoy que le party me soit advantageux ; si ne laissay-je de beaucoup ressentir la separation de nostre amitié. Toutefois puis que c'est folie de contrarier à ce qui ne peut arriver autrement, je vous conseille de vous armer de resolution, & d'oublier tellement tout ce qui s'est passé entre nous, que Celadon n'ait plus de memoire d'Astrée, comme Astrée est contrainte d'ores en là, de perdre pour son devoir tous les souvenirs de Celadon. </p></div>
+         
+         <div id="Div16" class="box">
+   <script>var p = document.getElementById("Div16");
+   p.style.display = "none"</script>
+         <h2>LETTRE D'ASTREE A CELADON.</h2>
+         <p id="16"><i> Ecrivain: </i>Astrée<br/><i> Destinataire: </i>Celadon<br/><br/>Mon cher Celadon, j'ay receu vostre lettre, qui m'a esté autant agreable, que je sçay que les miennes le vous sont, & n'y ay rien trouvé qui ne me satisface, hor-mis les remerciements que vous me faites, qui ne me semblent à propos, ny pour mon amitié, ny pour ce Celadon qui dés long temps s'est des-ja tout donné à moy : car s'ils ne sont point vostres, ne sçavez-vous pas que ce qui n'a point ce titre ne sçauroit me plaire ? que s'ils sont à vous, pourquoy me donnez vous separé ce qu'en une fois j'ay receu, quand vous vous donnastes tout à moy, n'en usez donc plus je vous supplie : si vous ne me voulez faire croire, que vous aiez plus de civilité que d'Amour. </p></div>
+         
+         <div id="Div17" class="box">
+   <script>var q = document.getElementById("Div17");
+   q.style.display = "none"</script>
+         <h2>LETTRE DE CORILAS A STELLE.</h2>
+         <p id="17"><i> Ecrivain: </i>Corilas<br/><i> Destinataire: </i>Stelle<br/><br/>Il est bien impossible de vous voir sans vous aimer, mais plus encore de vous aimer sans estre extréme en telle affection : que si pour ma deffense il vous plaist de considerer ceste verité, quand ce papier se presentera devant vos yeux, je m'assure que la grandeur de mon mal obtiendra par pitié autant de pardon envers vous, que l'outrecuidance qui m'ésleve en lieu si haut, pourroit meriter de juste punition, & vous fera recevoir mon service avec autant de douceur, que de flames vos perfections allument en ce cœeur, duquel je baise mille & mille fois vos belles mains, sans pouvoir par tel nombre égaler celuy des morts, que le refus de cette supplication me donnera, ny des felicitez qui m'accompagneront, si vous me recevez, comme veritablement je suis, pour vostre tres-affectionné & fidele serviteur. </p></div>
+         
+         <div id="Div18" class="box">
+   <script>var r = document.getElementById("Div18");
+   r.style.display = "none"</script>
+         <h2>LETTRE DE FILANDRE A DIANE.</h2>
+         <p id="18"><i> Ecrivain: </i>Filandre<br/><i> Destinataire: </i>Diane<br/><br/>Ceux qui ont l'honneur de vous voir courent une dangereuse fortune. S'ils vous aiment ils sont outrecuidez, & s'ils ne vous aiment point ils sont sans jugement, vos perfections estant telles, qu'avec raison elles ne peuvent, ny estre aimées ny n'estre point aimées, & moy estant contraint de tomber en l'une de ces deux erreurs, j'ay choisi celle qui a plus esté selon mon humeur, & dont aussi bien il m'estoit impossible de me retirer. Ne trouvez donc mauvais, belle Bergere, puis qu'on ne vous peut voir sans vous aimer, que vous ayant veuë je vous aime. Que si cette temerité merite chastiement, ressouvenez-vous que j'aime mieux vous aimer en mourant, que vivre sans vous aimer. Mais, que dis-je, j'aime mieux ? il n'est plus en mon choix, car il faut que par necessité je sois tant que je vivray, aussi veritablement vostre serviteur, que vous ne sçauriez estre telle que vous estes, sans estre la plus belle Bergere qui vive. </p></div>
+        
+         <div id="Div19" class="box">
+   <script>var s = document.getElementById("Div19");
+   s.style.display = "none"</script>
+         <h2>LETTRE DE HYLAS A CARLIS.</h2>
+         <p id="19"><i> Ecrivain: </i>Hylas<br/><i> Destinataire: </i>Carlis<br/><br/>Je ne vous escris pas à ce coup, Carlis, pour vous dire que je vous ay aimée, car vous ne l'avez que trop creu ; mais bien pour vous assurer que je ne vous aime plus : Je sçay assurément que vous serez estonnée de ceste declaration, puis que vous m'avez tousjours plus aimé presque que je n'ay sçeu desirer : mais ce qui me retire de vous, il faut par force advoüer que c'est vostre malheur, qui ne vous veut continuer plus long temps le plaisir de nostre amitié, ou bien ma bonne fortune, qui ne me veut davantage arrester à si peu de chose. Et afin que vous ne vous plaigniez de moy, je vous dis à-dieu, & vous donne congé de prendre party où bon vous semblera ; car en moy vous n'y devez plus avoir d'esperance. </p></div>
+         
+         <div id="Div20" class="box">
+   <script>var t = document.getElementById("Div20");
+   t.style.display = "none"</script>
+         <h2>RESPONSE DE CARLIS A HYLAS.</h2>
+         <p id="20"><i> Ecrivain: </i>Carlis<br/><i> Destinataire: </i>Hylas<br/><br/>Hylas, l'outrecuidance a esté celle qui vous a persuadé d'estre aimé de moy, & la cognoissance que j'ay eu de vostre humeur, & ma volonté qui l'a tousjours trouvée fort desagreable, ont esté celles qui m'ont empesché de vous aimer, si bien que toute l'amitié que je vous ay portée, a esté seulement en vostre opinion, & de mesme mon malheur, & vostre bonne fortune, & en cela il n'y a rien eu de certain, sinon que veritablement quand vous avez creu d'estre aimé de moy, vous avez esté trompé. Je vous en jure Hylas, par tous les merites que vous pensez estre, & qui ne sont pas en vous, qui sont en beaucoup plus grand nombre que ceux qui me deffaillent pour estre digne de vous. L'avantage que je pretends en tout cecy, c'est d'estre exempte à l'advenir de vos importunitez, & pour n'estre point entierement ingratte du plaisir que vous me faites en cela, je ne sçay que vous souhaitter de plus avantageux, & pour moy aussi, sinon que le Ciel vous fasse à jamais continuer ceste reso lution, pour mon contentement, comme il vous donna la volonté de me rechercher, pour m'importuner. Ce pendant vivez content, & si vous l'estes autant que moy, estant delivrée d'un si cruel fardeau, croyez Hylas que ce ne sera peu. </p></div>
+         
+         <div id="Div21" class="box">
+   <script>var u = document.getElementById("Div21");
+   u.style.display = "none"</script>
+         <h2>RESPONSE DE STILLIANE A HYLAS.</h2>
+         <p id="21"><i> Ecrivain: </i>Carlis<br/><i> Destinataire: </i>Hylas<br/><br/>Hylas voyez combien sont mal fondez vos desseins, vous voulez que pour la consideration de Carlis je vous aime, & il n'y a rien qui me fasse tant vous haïr que la memoire que j'ay de Carlis : vous dittes que vous m'aimez, si quelqu'autre plus veritable que vous me le disoit je le pourrois bien croire, car je cognois bien que je le merite, mais moy qui ne ments jamais, vous assure que je ne vous aime point, & pource n'en doutez nullement ; aussi seroit-ce avoir bien peu de jugement d'aimer une humeur si mesprisable. Si vous trouvez ces paroles un peu trop rudes, ressouvenez vous, Hylas, que j'y suis contrainte, afin que vous ne vous persuadiez pas d'estre aimé de moy. Carlis m'est tesmoin de la condition de Hylas, & Hylas le sera de la mienne, si pour le moins il veut quelque vous de n'en accuser que vous-mesme. </p></div>
+         
+         <div id="Div22" class="box">
+   <script>var v = document.getElementById("Div22");
+   v.style.display = "none"</script>
+         <h2>LETTRE DE LINDAMOR A GALATHEE.
+</h2>
+         <p id="22"><i> Ecrivain: </i>Lindamor<br/><i> Destinataire: </i>Galathée<br/><br/>Ce n'est pas pour me plaindre de Madame, que j'ose prendre la plume, mais pour desplorer ce malheur seulement qui me rend si mesprisé de celle qui autrefois ne me souloit pas traitter de ceste sorte : Si suis-je bien ce mesme serviteur, qui vous a tousjours servie avec toute sorte de respect & de sousmission. Et vous ceste mesme Dame, qui la premiere a esté la mienne. Depuis que vous me receustes pour vostre, je ne suis point devenu moindre, ny vous plus grande, si cela est, pourquoy ne me jugez vous digne du mesme traittement ; J'ay demandé conte à mon ame de ses actions, quand il vous plaira je les vous desplieray toutes devant les yeux. Quant à moy je n'en ay pu accuser une seule, si vous le jugez autrement m'ayant ouy, ce ne sera peu de consolation à ce pauvre condanné, de sçavoir pour le moins le sujet de son supplice. </p></div>
+         
+         <div id="Div23" class="box">
+   <script>var w = document.getElementById("Div23");
+   w.style.display = "none"</script>
+         <h2>LETTRE DE LINDAMOR A GALATHEE.
+</h2>
+         <p id="23"><i> Ecrivain: </i>Lindamor<br/><i> Destinataire: </i>Galathée<br/><br/>Autrefois l'Amour, à ceste heure le desespoir de l'Amour, me met ceste plume en la main, avec dessein, si elle ne me rapporte point de soulagement, de la changer en fer, qui me promet une entiere, quoy que cruelle guerison : Ce papier blanc, que pour response vous m'avez envoyé, est bien un tesmoignage de mon innocence, puis que c'est à dire que vous n'avez rien trouvé pour m'accuser, mais ce m'est bien aussi une assurance de vostre mespris, car d'où pourroit proceder ce silence, si ce n'estoit de là ? L'un me contente en moy-mesme, l'autre me desespere en vous. S'il vous reste quelque souvenir de mon fidelle service, par pitié je vous demande ou la vie, ou la mort : je parts le plus desesperé, qui jamais ait eu quelque sujet d'esperer.</p></div>
+        
+        <div id="Div24" class="box">
+   <script>var x = document.getElementById("Div24");
+   x.style.display = "none"</script>
+         <h2>RESPONSE DE LEONIDE A LINDAMOR,
+POUR GALATHÉE.
+</h2>
+         <p id="24"><i> Ecrivain: </i>Leonide<br/><i> Destinataire: </i>Galathée<br/><br/>De vostre mal tirez en la cognoissance de vostre bien, si vous n'eussiez point esté aymé, on n'eust pas ressenti peu de chose, vous ne pouvez sçavoir quelle est vostre offense que present, mais esperez en vostre affection, & en vostre retour.</p></div>
+         
+          <div id="Div25" class="box">
+   <script>var y = document.getElementById("Div25");
+   y.style.display = "none"</script>
+         <h2>RESPONSE DE LEONIDE A LINDAMOR.</h2>
+         <p id="25"><i> Ecrivain: </i>Leonide<br/><i> Destinataire: </i>Lindamor<br/><br/>Vostre justice esclaire avec tant de Soleils, que mesme les yeuy les plus serrez ne peuvent en nier la clarté. Contentez-vous que ceuy que vous desirez qui la voyent par moy, ayant sceu vostre resolution, l'ont recognuë pour tres-juste : "Il est vray que tout ainsi que les blessures du corps ne sont pas consolidées, encor que le danger en soit osté, & qu'il faut en cela le temps, celles de l'ame en sont de mesme" : mais en ayant osté le danger par vostre valeur & prudence, vous devez laisser au temps de faire ses actions ordinaires, vous ressouvenant que "les playes qui se serrent trop promptement sont sujettes à faire sac", qui par apres est plus dangereuy que n'estoit la blessure. Esperez tout ce que vous desirez, car vous le pouvez faire avec raison.</p></div>
+         
+          <div id="Div26" class="box">
+   <script>var z = document.getElementById("Div26");
+   z.style.display = "none"</script>
+         <h2>REPLIQUE DE LINDAMOR A LEONIDE..</h2>
+         <p id="26"><i> Ecrivain: </i>Lindamor<br/><i> Destinataire: </i>Leonide<br/><br/>Vostre justice esclaire avec tant de Soleils, que mesme les yeuy les plus serrez ne peuvent en nier la clarté. Contentez-vous que ceuy que vous desirez qui la voyent par moy, ayant sceu vostre resolution, l'ont recognuë pour tres-juste : "Il est vray que tout ainsi que les blessures du corps ne sont pas consolidées, encor que le danger en soit osté, & qu'il faut en cela le temps, celles de l'ame en sont de mesme" : mais en ayant osté le danger par vostre valeur & prudence, vous devez laisser au temps de faire ses actions ordinaires, vous ressouvenant que "les playes qui se serrent trop promptement sont sujettes à faire sac", qui par apres est plus dangereuy que n'estoit la blessure. Esperez tout ce que vous desirez, car vous le pouvez faire avec raison.</p></div>
+         
+          <div id="Div27" class="box">
+   <script>var aa = document.getElementById("Div27");
+   aa.style.display = "none"</script>
+         <h2>LETTRE DE CELION A BELLINDE.</h2>
+         <p id="27"><i> Ecrivain: </i>Celion<br/><i> Destinataire: </i>Belinde<br/><br/>Belle Bergere, si vos yeux estoient aussi pleins de verité, qu'ils le sont de causes d'Amour ; la douceur que d'abort ils promettent, me feroit les adorer avec autant de contentement, qu'elle a produit en moy de vaine esperance. Mais tant s'en faut qu'ils soient prests de satisfaire à leurs trompeuses promesses, que mesmes ils ne veulent pas les advoüer, & sont si esloignez de guerir ma blessure, qu'ils ne s'en veulent pas seulement dire des blesseurs. Si est-ce que malaisément la pourront-ils nier, s'ils considerent quelle elle est, n'y ayant pas apparance, qu'autre beauté que la leur, en puisse causer de si grandes. Et toutefois comme si vous aviez fait dessein d'égaler vostre cruauté à vostre beauté, vous ordonnez que l'affection que vous avez fait naistre, meure cruellement en moy. Dieux ! fut-il jamais une plus impitoyable mere ! Mais moy qui ay plus cher ce qui vient de vous, que ma propre vie, ne pouvant souffrir une si grande injustice, suis resolu de porter ceste affection avec moy dans le cercueil, esperant que le Ciel esmeu en fin de ma patience, vous fera m'estre quelquefois aussi pitoyable, que vous m'estes chere maintenant, & cruelle. </p></div>
+         
+         <div id="Div28" class="box">
+   <script>var ab = document.getElementById("Div28");
+   ab.style.display = "none"</script>
+         <h2>LETTRE D'AMARANTHE A CELION.</h2>
+         <p id="28"><i> Ecrivain: </i>Amaranthe<br/><i> Destinataire: </i>Celion<br/><br/>Voz perfections doivent excuser mon erreur, & vostre courtoisie recevoir l'amitié que je vous offre : je me voudrois mal, si j'aimois quelque chose moindre que vous, mais pour vostre merite, je faits ma gloire, d'où ma honte pour un autre procederoit. Si vous refusez ce que je vous presente, ce sera faute d'esprit ou de courage, lequel que ce soit des deux, vous est aussi peu honorable, qu'à moy d'estre refusée. </p></div>
+
+<div id="Div29" class="box">
+   <script>var ac = document.getElementById("Div29");
+   ac.style.display = "none"</script>
+         <h2>RESPONSE DE CELION A AMARANTHE.</h2>
+         <p id="29"><i> Ecrivain: </i>Celion<br/><i> Destinataire: </i>Amaranthe<br/><br/>Je ne sçay qu'il y a en moy, qui vous puisse esmouvoir à m'aimer, toutefois je m'estime autant heureux qu'une telle Bergere me daigne regarder, que je suis infortuné de ne pouvoir recevoir une telle fortune : Que pleust à ma destinée, que je me pusse aussi bien donner à vous, comme je n'en ay la puissance. Belle Amaranthe, je me croirois le plus heureux qui vive, de vivre en vostre service, mais n'estant plus en ma disposition, vous n'accuserez s'il vous plaist, mon esprit ny mon courage de ce à quoy la necessité me contraint. Ce me sera tousjours beaucoup de contentement d'estre en vos bonnes graces, mais à vous encor plus de regret de remarquer à tous moments l'impuissance de mon affection. Si bien que je suis forcé de vous supplier par vostre vertu mesme, de diminuer ceste trop ardante passion en une amitié moderée, que je recevray de tout mon cœur, car telle chose ne m'est impossible, & ce qui ne l'est pas ne me peut estre trop difficile pour vostre service. </p></div>
+
+
+<div id="Div30" class="box">
+   <script>var ad = document.getElementById("Div30");
+   ad.style.display = "none"</script>
+         <h2>LETTRE DE CELION A BELLINDE.</h2>
+         <p id="30"><i> Ecrivain: </i>Celion<br/><i> Destinataire: </i>Belinde<br/><br/>Si j'avois merité un traittement si rude que celuy que je reçois de vous, j'eslirois plutost la mort, que de le souffrir ; mais puis que c'est pour vostre contentement, je le reçois avec un peu plus de [plaisir], que si en eschange vous m'ordonniez la mort, toutefois puis-que je me suis tout donné à vous, il est raisonnable que vous puissiez absolument en disposer. J'essayeray donc de vous obeïr, mais ressouvenez vous, qu'aussi long temps que durera ceste contrainte, autant faudra-il rayer des jours de ma vie : car je ne nommeray jamais cela vivre, qui raporte plus de douleur que la mort, abregez-le donc rigoureuse Bergere, s'il y a encor en vous une seule estincelle, non pas d'amitié, mais de pitié seulement. </p></div>
+         
+         <div id="Div31" class="box">
+   <script>var ae = document.getElementById("Div31");
+   ae.style.display = "none"</script>
+         <h2>LETTRE DE CELION A BELLINDE, EN SON
+TRANSPORT.
+.</h2>
+         <p id="31"><i> Ecrivain: </i>Celion<br/><i> Destinataire: </i>Bellinde<br/><br/>Faut-il donc, inconstante Bergere, que ma peine survive mon affection ? Faut-il que sans vous aymer, j'aye tant de peine pour vous sçavoir entre les mains d'un autre ? N'est-ce point que les Dieux me veuillent punir, pour vous avoir plus aymée que je ne devois ? ou plutost n'est-ce point que je me figure de ne vous aymer plus, & que toutefois j'aye plus d'Amour pour vous, que je n'euz jamais ? Toutefois, pourquoy vous aymerois-je, puis que vous estes, & ne pouvez estre à autre qu'à une personne que je n'ayme point ? Mais au contraire, pourquoy ne vous aymerois-je point, puis que je vous ay tant aimée ? Il est vray, mais je ne vous dois point aymer, car vous estes ingrate, une ame toute d'oubly, & qui n'a nul ressentiment d'Amour. Toutefois quelle que vous soyez, si estes vous Bellinde, & Bellinde peut elle estre sans que Celion l'ayme ? Vous aime-je donc, ou si je ne vous ayme point ? Jugez en vous mesme, Bergere, car quant à moy j'ay l'esprit si troublé, que je n'en puis discerner autrechose, sinon que je suis la personne du monde la plus affligée. </p></div>
+         
+         <div id="Div32" class="box">
+   <script>var af = document.getElementById("Div32");
+   af.style.display = "none"</script>
+         <h2>LETTRE DE BELLINDE A CELION.</h2>
+         <p id="32"><i> Ecrivain: </i>Bellinde<br/><i> Destinataire: </i>Celion<br/><br/>Il m'est impossible de supporter davantage le tort que vostre estrange façon de vivre nous fait à tous deux. Je ne nie pas que vous n'ayez occasion de plaindre nostre fortune : Mais je dis bien qu'une personne sage n'en sçauroit avoir qui luy permette sans blasme de devenir fol. Quel transport est celuy qui vous empesche de voir, que donnant cognoissance à tout le reste du monde, que vous mourez d'Amour pour moy, vous me contraignez toutefois de croire que veritablement vous ne m'aimez point. Car si vous m'aimiez, voudriez vous me desplaire ? & ne sçavez-vous pas que la mort ne me sçauroit estre plus ennuyeuse que l'opinion que vous donnez à chacun de nostre amitié ? Cessez donc, mon frere, je vous supplie, & par ce nom qui vous obli ge d'avoir soing de ce qui me touche. Je vous conjure, que si present vous ne pouvez supporter ce desastre sans donner cognoissance de vostre ennuy, vous preniez pour le moins resolution de vous esloigner en sorte, que ceux qui vous oyront plaindre, ne cognoissant point mon nom, ne fassent que regretter avec vous vos ennuis, sans pouvoir rien soupçonner à mon desavantage. Si vous me contentez en ceste resolution, vous me ferez croire que c'est surabondance, & non point deffaut d'affection, qui vous a fait errer contre moy : Et ceste consideration obligera Bellinde, outre l'amitié qu'elle vous porte, de conserver tousjours chere la memoire de ce frere qui l'aime parmy tous ses cruels & insupportables desplaisirs. </p></div>
+         
+            <div id="Div33" class="box">
+   <script>var ag = document.getElementById("Div33");
+   ag.style.display = "none"</script>
+         <h2>LETTRE DE LINDAMOR À LEONIDE.</h2>
+         <p id="33"><i> Ecrivain: </i>Lindamor<br/><i> Destinataire: </i>Leonide<br/><br/>Autant que l'esloignement a eu peu de puissance sur mon ame : autant ay-je peur qu'il n'en ayt eu beaucoup sur celle que j'adore : Ma foy me promet bien que non : mais ma fortune me menace que si : toutefois l'assurance que j'ay en la prudence de ma confidente,me fait vivre avec moins de crainte, que si ma memoire y estoit seule. Ressouvenez-vous donc de ne point tromper l'esperance que j'ay de vous, ny desmantir les assurances de nostre amitié. </p></div>
+         
+         <div id="Div34" class="box">
+   <script>var h = document.getElementById("Div34");
+   h.style.display = "none"</script>
+         <h2>LETTRE DE LINDAMOR À GALATHÉE.
+</h2>
+         <p id="34"><i> Ecrivain: </i>Lindamor<br/><i> Destinataire: </i>Galathée<br/><br/>Ny le retardement de mon voyage, ny les horreurs de Bellonne, ny les beautez de ces nouvelles hostesses de la Gaule, ne peuvent occuper le souvenir que vostre fidele serviteur a de vous, sans revoler continuellement au bien-heureux sejour, où en vous esloignant je laissay toute ma gloire, si bien que ne pouvant refuser à mon affection la curiosité de sçavoir comme Madame se porte, apres vous avoir mille fois baisé la robbe, je vous presente toutes les bonnes fortunes dont les armes m'ont voulu favoriser, & les offre à vos pieds, comme à la divinité dont je les recognois. Si vous les recevez pour vostres, la renommée les vous don nera de ma part, qui me l'a promis ainsi, aussi bien que vous l'honneur de vos bonnes graces à vostre tres-humble serviteur. </p></div>
+         
+         <div id="Div35" class="box">
+   <script>var ai = document.getElementById("Div35");
+   ai.style.display = "none"</script>
+         <h2>LETTRE DE LIGDAMON À SILVIE.</h2>
+         <p id="35"><i> Ecrivain: </i>Ligdamon<br/><i> Destinataire: </i>Silvie<br/><br/>Si vous avez esté offensée de l'outrecuidance qui m'a fait vous aymer, la mort qui m'en est ensuivie vous vengera. Que si elle vous est indifferente, je m'assure que ce dernier acte de mon affection, me gaignera quelque chose de plus advantageux en vostre ame : s'il advient ainsi, je cheris la ressemblance de Lydias, plus que ma naissance, puis que par elle je vins au monde pour vous estre ennuyeux, & que par celle-cy j'en sors vous estant agreable. </p></div>
+         
+         <div id="Div36" class="box">
+   <script>var aj = document.getElementById("Div36");
+   aj.style.display = "none"</script>
+         <h2>LLETTRE D'ASTREE A CELADON.</h2>
+         <p id="36"><i> Ecrivain: </i>Astrée<br/><i> Destinataire: </i>Celadon<br/><br/>Dieu permette Celadon, que l'assurance que vous me faites de vostre amitié, me puisse estre aussi longuement continuée, comme d'affection je vous en supplie, & de croire que je vous tiens plus cher, que si vous m'estiez frere, & qu'au tombeau mesme je seray vostre. </p></div>
+         
+         </div>
+    </body>
+</html>
