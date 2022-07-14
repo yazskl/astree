@@ -328,7 +328,6 @@ margin: auto;
 .collapsible {
   background-color: #4e5ade;
   color: white;
-  transition: background .2s ease-in;
   cursor: pointer;
   padding: 18px;
   width: 100%;
