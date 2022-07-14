@@ -342,7 +342,6 @@ margin: auto;
   text-align: left;
   outline: none;
   font-size: 15px;
-  transition: background .2s ease-in;
 }
 
 .collapsible:after {
@@ -368,5 +367,4 @@ margin: auto;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
-  transition: background .2s ease-in;
 }
