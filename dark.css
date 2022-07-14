@@ -358,6 +358,5 @@ margin: auto;
   line-height: 25px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
   background-color: #5f5f61;
 }
